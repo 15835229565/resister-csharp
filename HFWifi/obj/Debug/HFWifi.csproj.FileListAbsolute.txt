@@ -1,0 +1,40 @@
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\bin\Debug\HFWifi.exe.config
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\bin\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\bin\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.csprojResolveAssemblyReference.cache
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.Properties.Resources.resources
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.SerialSetting.resources
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.csproj.GenerateResource.Cache
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\c#\HFWifi\HFWifi\obj\Debug\HFWifi.MainForm.resources
+C:\Users\zwq\Desktop\smc 串口\HFWifi\bin\Debug\HFWifi.exe.config
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\smc 串口\HFWifi\bin\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\smc 串口\HFWifi\bin\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.csprojResolveAssemblyReference.cache
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.MainForm.resources
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.Properties.Resources.resources
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.SerialSetting.resources
+C:\Users\zwq\Desktop\smc 串口\HFWifi\obj\Debug\HFWifi.csproj.GenerateResource.Cache
+C:\Users\zwq\Desktop\应变标定\HFWifi\bin\Debug\HFWifi.exe.config
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\应变标定\HFWifi\bin\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\应变标定\HFWifi\bin\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.csprojResolveAssemblyReference.cache
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.MainForm.resources
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.Properties.Resources.resources
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.SerialSetting.resources
+C:\Users\zwq\Desktop\应变标定\HFWifi\obj\Debug\HFWifi.csproj.GenerateResource.Cache
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\bin\Debug\HFWifi.exe.config
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\bin\Debug\HFWifi.exe
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\bin\Debug\HFWifi.pdb
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.csprojResolveAssemblyReference.cache
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.MainForm.resources
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.Properties.Resources.resources
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.SerialSetting.resources
+C:\Users\zwq\Desktop\应变标定上位机\HFWifi\obj\Debug\HFWifi.csproj.GenerateResource.Cache
