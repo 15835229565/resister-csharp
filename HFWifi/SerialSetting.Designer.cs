@@ -48,8 +48,6 @@
             // 
             this.SerialNum.FormattingEnabled = true;
             this.SerialNum.Items.AddRange(new object[] {
-            "COM1",
-            "COM2",
             "COM3",
             "COM4",
             "COM5",
@@ -69,7 +67,6 @@
             // 
             this.Baudrate.FormattingEnabled = true;
             this.Baudrate.Items.AddRange(new object[] {
-            "9600",
             "115200"});
             this.Baudrate.Location = new System.Drawing.Point(92, 84);
             this.Baudrate.Name = "Baudrate";

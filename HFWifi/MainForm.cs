@@ -24,6 +24,7 @@ namespace HFWifi
         bool is_show = false;
         public RollingPointPairList[] voltLine = new RollingPointPairList[8];
         public LineItem[] voltCurve = new LineItem[8];
+        int channel = 0;
 
         delegate void HandleInterfaceUpdateDelegate(byte[] buf, int allLength);
         HandleInterfaceUpdateDelegate interfaceUpdateHandle; //用于更新label上的重量数据 
@@ -167,9 +168,15 @@ namespace HFWifi
 
             //uTemp = System.BitConverter.ToUInt16(bData, num * 2 + 1);
             iTemp = (Int16)(bData[num * 2] * 256 + bData[num * 2 + 1]);
-    
-            dTemp = iTemp;
-              
+
+            //dTemp = (double)iTemp * 0.117839 + 86.431880; //ch1 <1000
+            //dTemp = (double)iTemp * 0.118036 + 86.554680; //ch1 <2500
+            //dTemp = (double)iTemp * 0.117582 + 86.118768; //ch6 <2500
+            //dTemp = (double)iTemp;
+
+            //dTemp = (double)iTemp * 0.118036 + 86.554680 + 1 - 166; //ch1 <2500 二次
+            dTemp = (double)iTemp * 0.117582 + 86.118768 + 1;
+
             return (Math.Round(dTemp, 0));
         }
 
@@ -182,28 +189,60 @@ namespace HFWifi
             }
             else if (is_show == false)
             {
-                if (radioButton1.Checked) voltCurve[0].IsVisible = true;
+                if (radioButton1.Checked)
+                {
+                    channel = 0;
+                    voltCurve[0].IsVisible = true;
+                }
                 else voltCurve[0].IsVisible = false;
 
-                if (radioButton2.Checked) voltCurve[1].IsVisible = true;
+                if (radioButton2.Checked)
+                {
+                    channel = 1;
+                    voltCurve[1].IsVisible = true;
+                }
                 else voltCurve[1].IsVisible = false;
 
-                if (radioButton3.Checked) voltCurve[2].IsVisible = true;
+                if (radioButton3.Checked)
+                {
+                    channel = 2;
+                    voltCurve[2].IsVisible = true;
+                }
                 else voltCurve[2].IsVisible = false;
 
-                if (radioButton4.Checked) voltCurve[3].IsVisible = true;
+                if (radioButton4.Checked)
+                {
+                    channel = 3;
+                    voltCurve[3].IsVisible = true;
+                }
                 else voltCurve[3].IsVisible = false;
 
-                if (radioButton5.Checked) voltCurve[4].IsVisible = true;
+                if (radioButton5.Checked)
+                {
+                    channel = 4;
+                    voltCurve[4].IsVisible = true;
+                }
                 else voltCurve[4].IsVisible = false;
 
-                if (radioButton6.Checked) voltCurve[5].IsVisible = true;
+                if (radioButton6.Checked)
+                {
+                    channel = 5;
+                    voltCurve[5].IsVisible = true;
+                }
                 else voltCurve[5].IsVisible = false;
 
-                if (radioButton7.Checked) voltCurve[6].IsVisible = true;
+                if (radioButton7.Checked)
+                {
+                    channel = 6;
+                    voltCurve[6].IsVisible = true;
+                }
                 else voltCurve[6].IsVisible = false;
 
-                if (radioButton8.Checked) voltCurve[7].IsVisible = true;
+                if (radioButton8.Checked)
+                {
+                    channel = 7;
+                    voltCurve[7].IsVisible = true;
+                }
                 else voltCurve[7].IsVisible = false;
 
                 button_start.Text = "暂停显示";
@@ -293,7 +332,7 @@ namespace HFWifi
                                 {
                                         MO = Data_V(i);
                                         CurveAddPoint_V(MO, time_c, i);
-                                    if (i == 0) temp = MO;
+                                        if (i == channel) temp = MO;
                                 }
 
                                 time_c += time_interval;

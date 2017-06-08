@@ -15,6 +15,9 @@ namespace HFWifi
         public SerialSetting()
         {
             InitializeComponent();
+            this.Baudrate.SelectedIndex = this.Baudrate.Items.IndexOf("115200");
+            this.SerialNum.SelectedIndex = this.SerialNum.Items.IndexOf("COM6");
+
         }
         public int Baud
         {
