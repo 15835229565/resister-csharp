@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZedGraph;
+using System.Threading;
 
 namespace HFWifi
 {
@@ -36,7 +37,6 @@ namespace HFWifi
         public string Baud;
         private void 串口设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            byte[] send = { 0x53, 0xff, 0x01, 0x02, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x45 };
             SerialSetting FSerialSetting = new SerialSetting();
             FSerialSetting.ShowDialog();
             if (FSerialSetting.DialogResult == DialogResult.OK)
@@ -46,7 +46,6 @@ namespace HFWifi
                 interfaceUpdateHandle = new HandleInterfaceUpdateDelegate(UpdateLabel);  //实例化委托对象 
                 FSerialSetting.Close();
                 this.serialPort1.Open();
-                this.serialPort1.Write(send, 0, 17);
             }
         }
 
@@ -175,20 +174,27 @@ namespace HFWifi
             //dTemp = (double)iTemp;
 
             //dTemp = (double)iTemp * 0.118036 + 86.554680 + 1 - 166; //ch1 <2500 二次
-            dTemp = (double)iTemp * 0.117582 + 86.118768 + 1;
+            //dTemp = (double)iTemp * 0.117582 + 86.118768 + 1; //ch6 <2500 二次
+
+            dTemp = (double)iTemp;
 
             return (Math.Round(dTemp, 0));
         }
 
         private void button_start_Click(object sender, EventArgs e)
         {
-            if(is_show == true)
+            if (is_show == true)
             {
+                byte[] send1 = { 0x53, 0xff, 0x11, 0x12, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x45 };
+                this.serialPort1.Write(send1, 0, 17);
                 button_start.Text = "开始显示";
                 is_show = false;
             }
             else if (is_show == false)
             {
+                byte[] send1 = { 0x53, 0xff, 0x05, 0x06, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x45 };
+                this.serialPort1.Write(send1, 0, 17);
+                Thread.Sleep(500);
                 if (radioButton1.Checked)
                 {
                     channel = 0;
@@ -246,6 +252,8 @@ namespace HFWifi
                 else voltCurve[7].IsVisible = false;
 
                 button_start.Text = "暂停显示";
+                byte[] send2 = { 0x53, 0xff, 0x01, 0x02, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x45 };
+                this.serialPort1.Write(send2, 0, 17);
                 is_show = true;
             }
         }
